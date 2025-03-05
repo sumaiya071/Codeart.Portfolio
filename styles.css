@@ -290,7 +290,7 @@ p:hover::after{
     width:100%;
     position: relative;
     background-color:rgb(17, 17, 17); 
-    padding: 20px 40px;
+    padding: 60px;
 }
 .page4 .img {
     position: absolute;
@@ -453,6 +453,29 @@ p:hover::after{
 .footerNav ul li a:hover{
     opacity: 1;
 }
+.footerNav li {
+    position: relative;
+}
+.footerNav li.contact::after {
+    content: "sumaiyaprvj07@gmail.com";
+    position: absolute;
+    left: 50%;
+    bottom: 120%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+.footerNav li.contact:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
 .footerBottom {
     background-color:  rgb(17, 17, 17);
     padding: 60px 30px;
@@ -468,7 +491,6 @@ p:hover::after{
    font-weight: 400;
    margin: 0px 5px; 
 }
-
 @media screen and (max-width:390px){
     .cursor{
         z-index: 0;
