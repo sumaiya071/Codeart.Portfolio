@@ -76,10 +76,12 @@ nav h4{
     font-family: garnett head;
     font-size: 34vh;
     line-height: 28vh;
-    padding: auto;
+    padding: 20px;
 }   
 .page1-content h1 span{
     font-family: garnett head;
+    font-size: 34vh;
+    line-height: 28vh;
 }
 .page2{
     height: 100vh;
@@ -267,6 +269,7 @@ h3 span:hover::after{
     margin: 10px auto;
     position: relative;
     width: max-content;
+    
 }
 p::after{
     content: '';
@@ -287,8 +290,7 @@ p:hover::after{
     width:100%;
     position: relative;
     background-color:rgb(17, 17, 17); 
-    padding: 20px;
-    align-content: center;
+    padding: 20px 40px;
 }
 .page4 .img {
     position: absolute;
@@ -354,13 +356,14 @@ p:hover::after{
     display: flex;
     align-items: flex-end;
     padding: 20px 100px 0px 40px;
-    z-index: 99;
+    z-index: 1;
 }
 .page4-top h2{
     font-size: 16px;
     color:#f3f9f9;
     font-family: garnett;
     padding-left: 40px;
+    padding-bottom: 20px;
 }
 .page4-elements1{
     height: 20vh;
@@ -388,72 +391,13 @@ p:hover::after{
 .page4-elements2 .em:hover{
     transform: scale(1.1) 
 }   
-/* .page4-elements .toolbox{
-    align-items: center;
-    background-color: #f5f5f5;
-    border-radius: 18px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 0px;
-    height: var(--framer-aspect-ratio-supported, 100vh);
-    justify-content: flex-start;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    will-change: var(--framer-will-change-override, transform);
-    z-index: 2;
-}
-.page4-elements .toolbox .row1{
-    align-content: center;
-    align-items: center;
-    display: flex;
-    flex: 1 0 0px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0px;
-    height: 1px;
-    justify-content: center;
-    overflow: visible;
-    padding: 0;
-    position: relative;
-    width: var(--framer-aspect-ratio-supported, 927px);
-} */
-/* .page4 button {
-    width: 165px;
-    height: 62px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 17px;
-    border-radius: 1rem;
-    border: solid 1px #bfbfbf;
-    position: relative;
-    background: #0f0f0f;
-    transition: 0.1s;
-}
-button::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(33, 33, 33) 17.8%, rgb(118, 118, 118) 100.2% );
-    filter: blur(15px);
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-button:active {
-    transform: scale(0.9) rotate(3deg);
-    background: radial-gradient( circle farthest-corner at 10% 20%,  rgb(49, 47, 49) 17.8%, rgb(141, 144, 144) 100.2% );
-    transition: 0.5s;
-} */
 .page5{
     min-height: 100vh;
     width: 100%;
     position: relative;
     padding: 40px 0;
     background-color: rgb(17, 17, 17);
+    
 }
 .page5-top h1{
     font-size: 10vw;
@@ -547,15 +491,29 @@ button:active {
     .page3-top h3{
         font-size: 20px;
     }
+    .page3-elements{
+        height: 100%;
+        flex-direction: column;
+    }
     .page3-elements .box{
         height: 100%;
-        width: auto;
-        flex-direction: column;
+        width: 100%;
         position: relative;
     }
-
-
-
+    .page4{
+        height: auto;
+    }
+    .page4-elements1{
+        padding: 20px;
+        gap: 6px;
+    }
+    .page4-elements2{
+        padding-top: 75px;
+        gap: 6px;
+    }
+    .page5-top h1{
+        text-align: center;
+    }
     .footerNav ul{
         flex-direction: column;
     }
@@ -572,45 +530,3 @@ button:active {
         border-radius: 50%;
     }
 }
-/* From Uiverse.io by SalladShooter 
-
-.button {
-    cursor: pointer;
-    padding: 1em;
-    font-size: 1em;
-    width: 7em;
-    aspect-ratio: 1/0.25;
-    color: white;
-    background: #0f0f0f;
-    background-size: cover;
-    background-blend-mode: overlay;
-    border-radius: 0.5em;
-    outline: 0.1em solid #353535;
-    border: 0;
-    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    position: relative;
-  }
-  
-  .button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 1em 0.45em rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg,#0f0f0f, #f8f8f88e);
-    background: radial-gradient(
-      circle at bottom,
-      rgba(238, 238, 238, 0.282) 10%,
-      #0f0f0f 70%
-    );
-    outline: 0.1em solid #353535;
-  }
-  
-  .icon {
-    fill: white;
-    width: 1em;
-    aspect-ratio: 1;
-    top: 0;
-    left: 0;
-    margin: auto;
-    transform: translate(-35%, 10%);
-  }
-  */ 
