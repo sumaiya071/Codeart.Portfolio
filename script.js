@@ -56,6 +56,81 @@ page1Content.addEventListener("mouseleave",function(){
 }
 cursorEffect()
 
+function menuTrigger() {
+ 
+    const trigger    = document.getElementById('menuTrigger');
+    const dropdown   = document.getElementById('pillDropdown');
+    if (!trigger || !dropdown) return;
+   
+    const pills = dropdown.querySelectorAll('.pill');
+    const wrap  = trigger.closest('.menu-wrap');
+    let isOpen  = false;
+   
+    /* ── OPEN ── */
+    function openMenu() {
+      if (isOpen) return;
+      isOpen = true;
+      trigger.classList.add('is-open');
+      dropdown.style.pointerEvents = 'all';
+      pills.forEach(p => p.classList.add('is-visible'));
+    }
+   
+    /* ── CLOSE ── */
+    function closeMenu() {
+      if (!isOpen) return;
+      isOpen = false;
+      trigger.classList.remove('is-open');
+      dropdown.style.pointerEvents = 'none';
+      pills.forEach(p => p.classList.remove('is-visible'));
+    }
+   
+    /* Hover (desktop) */
+    wrap.addEventListener('mouseenter', openMenu);
+    wrap.addEventListener('mouseleave', closeMenu);
+   
+    /* Click toggle (mobile + desktop) */
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      isOpen ? closeMenu() : openMenu();
+    });
+   
+    /* Outside click closes */
+    document.addEventListener('click', function (e) {
+      if (!wrap.contains(e.target)) closeMenu();
+    });
+   
+    /* Escape key */
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+    /* ── SMOOTH SCROLL ───────────────────────────────── */ 
+    var scrollMap = {
+      navAbout:   'about',
+      navWork:    'work',
+      navConnect: 'connect'
+    };
+   
+    Object.keys(scrollMap).forEach(function (id) {
+      var link = document.getElementById(id);
+      if (!link) return;
+   
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        closeMenu();
+   
+        var target = document.getElementById(scrollMap[id]);
+        if (!target) return;
+   
+        if (window.locoScroll=locoScroll) {
+          window.locoScroll.scrollTo(target);
+        } else {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+   }
+  menuTrigger();
+
 function page2Animation() { 
     gsap.from(".elem h1",{
         y:120,
@@ -72,3 +147,23 @@ function page2Animation() {
     })
 }
 page2Animation()
+
+const rows = document.querySelectorAll('.project-row');
+const hoverImg = document.getElementById('hoverImg');
+
+document.addEventListener('mousemove', e => {
+  hoverImg.style.left = (e.clientX + 30) + 'px';
+  hoverImg.style.top  = (e.clientY - 110) + 'px';
+});
+
+rows.forEach(row => {
+  row.addEventListener('mouseenter', () => {
+    const src = row.dataset.img;
+    if (!src) return;
+    hoverImg.src = src;
+    hoverImg.classList.add('visible');
+  });
+  row.addEventListener('mouseleave', () => {
+    hoverImg.classList.remove('visible');
+  });
+});
