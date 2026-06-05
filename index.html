@@ -33,7 +33,7 @@
                             <!-- iOS-style pill dropdown -->
                             <div class="pill-dropdown" id="pillDropdown">
                          
-                              <a class="pill" href="#About" id="navAbout">
+                              <!-- <a class="pill" href="#About" id="navAbout">
                                 <div class="pill-icon">
                                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
@@ -41,8 +41,8 @@
                                 </div>
                                 <span class="pill-label">About</span>
                                 <span class="pill-action">→</span>
-                              </a>
-                              <a class="pill" href="#work" id="navWork">
+                              </a> -->
+                              <!-- <a class="pill" href="#work" id="navWork">
                                 <div class="pill-icon">
                                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
@@ -51,7 +51,7 @@
                                 </div>
                                 <span class="pill-label">Work</span>
                                 <span class="pill-action">→</span>
-                              </a>
+                              </a> -->
                               <a class="pill" href="./public/docs/Sumaiya UI UX designer Resume.pdf" id="navResume" target="_blank" rel="no-referrer">
                                 <div class="pill-icon">
                                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -72,7 +72,7 @@
                                   </svg>
                                 </div>
                                 <span class="pill-label">Let's Connect</span>
-                                <span class="pill-action">→</span>
+                                <span class="pill-action" href="mailto:sumaiyaprvj07@gmail.com">→</span>
                               </a>
                             </div>
                         </div>
@@ -103,20 +103,255 @@
                 </div> 
                 </div>
         </div>
+        <section class="creative-section" id="skills">
+ 
+          <!-- noise overlay -->
+          <div class="cs-noise"></div>
+          <!-- subtle grid -->
+          <div class="cs-grid"></div>
+         
+          <!-- ambient orbs -->
+          <div class="cs-orb cs-orb1"></div>
+          <div class="cs-orb cs-orb2"></div>
+          <div class="cs-orb cs-orb3"></div>
+         
+          <!-- cursor glow (follows mouse) -->
+          <div class="cs-cursor-glow" id="csCursorGlow"></div>
+         
+          <!-- ════════ FLOATING DESK OBJECTS ════════ -->
+         
+          <!-- terminal window -->
+          <div class="cs-float cs-terminal" id="csTerminal">
+            <div class="cs-term-bar">
+              <span class="cs-td cs-td-r"></span>
+              <span class="cs-td cs-td-y"></span>
+              <span class="cs-td cs-td-g"></span>
+              <span class="cs-term-title">~/portfolio</span>
+            </div>
+            <div class="cs-term-body">
+              <div class="cs-tline"><span class="cs-tprompt">▶</span> <span class="cs-tcmd">npm run dev</span></div>
+              <div class="cs-tline cs-tsuccess">✓ compiled in 312ms</div>
+              <div class="cs-tline cs-tinfo">  ➜ Local: http://localhost:3000</div>
+              <div class="cs-tline"><span class="cs-tprompt">▶</span> <span class="cs-tcursor"></span></div>
+            </div>
+          </div>
+         
+          <!-- figma tokens panel -->
+          <div class="cs-float cs-figma-panel" id="csFigmaPanel">
+            <div class="cs-fp-header">
+              <span class="cs-fp-icon">◈</span>
+              <span class="cs-fp-label">Design Tokens</span>
+            </div>
+            <div class="cs-fp-swatches">
+              <div class="cs-swatch" style="background:#ff6a1a;" data-name="Primary"></div>
+              <div class="cs-swatch" style="background:#9b8aff;" data-name="Accent"></div>
+              <div class="cs-swatch" style="background:#4bbfff;" data-name="Info"></div>
+              <div class="cs-swatch" style="background:#9fe870;" data-name="Success"></div>
+              <div class="cs-swatch" style="background:#f3f9f9;" data-name="Text"></div>
+              <div class="cs-swatch" style="background:#1a1a1a;" data-name="Surface"></div>
+            </div>
+            <div class="cs-fp-divider"></div>
+            <div class="cs-fp-meta">AUTO LAYOUT · 8pt GRID · 4px RADIUS</div>
+          </div>
+         
+          <!-- sticky notes -->
+          <div class="cs-float cs-sticky" id="csSticky">
+            <div class="cs-tape"></div>
+            <p>✏️ design for<br><strong>humans</strong> first —<br>always!</p>
+          </div>
+          <div class="cs-float cs-sticky2" id="csSticky2">
+            <div class="cs-tape"></div>
+            <p>✏️ AI workflow: ChatGPT <br><strong>Claude AI</strong> Cursor <br> Lovable</p>
+          </div>
+         
+          <!-- coffee mug -->
+          <div class="cs-float cs-mug" id="csMug">
+            <span class="cs-mug-icon">☕</span>
+            <span class="cs-mug-label">fuel</span>
+            <div class="cs-steam">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+         
+          <!-- headphones -->
+          <div class="cs-float cs-phones" id="csPhones">
+            <span class="cs-phones-icon">🎧</span>
+            <span class="cs-phones-label">lo-fi beats</span>
+          </div>
+         
+          <!-- wireframe card -->
+          <div class="cs-float cs-wireframe" id="csWireframe">
+            <div class="cs-wf-header">
+              <div class="cs-wf-dot"></div><div class="cs-wf-dot"></div><div class="cs-wf-dot"></div>
+              <span class="cs-wf-title">frame.fig</span>
+            </div>
+            <div class="cs-wf-line cs-wf-full"></div>
+            <div class="cs-wf-line cs-wf-short"></div>
+            <div class="cs-wf-box">
+              <div class="cs-wf-avatar"></div>
+              <div class="cs-wf-lines-group">
+                <div class="cs-wf-line cs-wf-full" style="height:3px;"></div>
+                <div class="cs-wf-line cs-wf-short" style="height:3px;width:55%;"></div>
+              </div>
+            </div>
+            <div class="cs-wf-btn">CTA Button</div>
+          </div>
+         
+          <!-- ════════ HERO ════════ -->
+          <div class="cs-hero">
+            <div class="cs-hero-tag">
+              <span class="cs-hero-pulse"></span>
+              creative workspace
+            </div>
+            <!--<h2 class="cs-hero-name">Sumaiya<br><span class="cs-name-grad">Parvej</span></h2> -->
+            <p class="cs-hero-sub">Designing interfaces, building interactions,<br>and bringing stories to life.</p>
+            <div class="cs-chips">
+              <span class="cs-chip cs-chip-ux">✦ UI/UX Designer</span>
+              <span class="cs-chip cs-chip-dev">&lt;/&gt; Frontend Dev</span>
+              <span class="cs-chip cs-chip-mot">▶ Motion &amp; Video</span>
+            </div>
+          </div>
+         
+          <!-- ════════ BENTO CARDS ════════ -->
+          <div class="cs-bento">
+         
+            <!-- UX CARD -->
+            <div class="cs-card cs-card-ux" id="csCardUx" data-tilt>
+              <div class="cs-card-glow cs-card-glow-ux"></div>
+                <div class="cs-card-top">
+                  <span class="cs-card-icon">🎨</span>
+                  <span class="cs-card-number">01</span>
+                </div>
+              <h3 class="cs-card-title">UI/UX Design</h3>
+              <p class="cs-card-desc">Wireframes, prototypes &amp; design systems that put humans first. Every pixel intentional.</p>
+                  <div class="cs-card-tools">
+                    <span class="cs-tool">Figma</span>
+                    <span class="cs-tool">Miro</span>
+                    <span class="cs-tool">Sketch</span>
+                    <!-- <span class="cs-tool">Notion</span> -->
+                  </div>
+                <div class="em">
+                  <img src="https://static.cdnlogo.com/logos/f/54/figma.svg" alt="" style="height: 80px; width: 80px;">
+                  <img src="https://static.cdnlogo.com/logos/m/32/miro.svg" alt="" style="height:80px; width:80px;border-radius: 8px;">       
+                  <img src="https://static.cdnlogo.com/logos/s/43/sketch.svg" alt="" style="height:90px; width:90px;border-radius: 8px;"></div>
+                  <!--<span class="cs-tool">Maze</span>-->
+              
+              <!-- <div class="cs-card-preview cs-preview-ux">
+                <div class="cs-wf-mini">
+                  <div class="cs-wfm-bar cs-wfm-full"></div>
+                  <div class="cs-wfm-bar cs-wfm-short"></div>
+                  <div class="cs-wfm-bar" style="width:42%;height:3px;"></div>
+                  <div class="cs-wfm-block">
+                    <div class="cs-wfm-circle"></div>
+                    <div style="flex:1;display:flex;flex-direction:column;gap:3px;">
+                      <div class="cs-wfm-bar" style="width:100%;height:3px;"></div>
+                      <div class="cs-wfm-bar" style="width:70%;height:3px;"></div>
+                    </div>
+                  </div>
+                  <div class="cs-wfm-cta">CTA</div>
+                </div>
+              </div> -->
+              <!--<div class="cs-card-hover-reveal">hover to explore →</div>-->
+            </div>
+         
+            <!-- DEV CARD -->
+            <div class="cs-card cs-card-dev" id="csCardDev" data-tilt>
+              <div class="cs-card-glow cs-card-glow-dev"></div>
+              <div class="cs-card-top">
+                <span class="cs-card-icon">⚡</span>
+                <span class="cs-card-number">02</span>
+              </div>
+              <h3 class="cs-card-title">Frontend Dev</h3>
+              <p class="cs-card-desc">Clean code, smooth interactions &amp; pixel-perfect builds from design to deployment.</p>
+                 <div class="cs-card-tools">
+                   <span class="cs-tool">HTML</span>
+                   <span class="cs-tool">CSS</span>
+                   <span class="cs-tool">JavaScript</span>
+                   <span class="cs-tool">GSAP</span>
+                  <span class="cs-tool">VS Code</span></div>
+           
+              <div class="em">
+                <img src="https://static.cdnlogo.com/logos/h/84/html.svg" alt="" style="height: 64px; width: 64px;">
+                <img src="https://static.cdnlogo.com/logos/c/18/css.svg" alt="" style="height: 64px; width: 64px;">
+                <img src="https://static.cdnlogo.com/logos/j/33/javascript.svg" alt="" style="height: 64px; width: 64px;border-radius: 8px;" >
+                <img src="https://static.cdnlogo.com/logos/v/82/visual-studio-code.svg" alt="" style="height: 64px; width: 64px;">
+              </div>
+          
+              <div class="cs-card-preview cs-preview-dev">
+                <div class="cs-code-block">
+                  <div class="cs-code-line"><span class="cs-kw">const</span> <span class="cs-fn">craft</span> <span class="cs-op">=</span> () <span class="cs-op">=&gt;</span> {</div>
+                  <div class="cs-code-line" style="padding-left:14px;"><span class="cs-kw">return</span> <span class="cs-str">"pure magic"</span></div>
+                  <div class="cs-code-line">}</div>
+                  <div class="cs-code-line cs-code-comment">// ✓ compiled in 0.3ms</div>
+                </div>
+              </div>
+              <!--<div class="cs-card-hover-reveal">hover to explore →</div>-->
+            </div>
+         
+            <!-- MOTION CARD -->
+            <div class="cs-card cs-card-mot" id="csCardMot" data-tilt>
+              <div class="cs-card-glow cs-card-glow-mot"></div>
+              <div class="cs-card-top">
+                <span class="cs-card-icon">🎬</span>
+                <span class="cs-card-number">03</span>
+              </div>
+              <h3 class="cs-card-title">Motion &amp; Video</h3>
+              <p class="cs-card-desc">Keyframes, cinematic edits &amp; stories told through motion. Emotion through animation.</p>
+              <div class="cs-card-tools">
+                <span class="cs-tool">Canva</span>
+                <span class="cs-tool">After Effects</span>
+                <span class="cs-tool">Premiere pro</span>
+                <!--<span class="cs-tool">Lottie</span>-->
+              </div>
+              <div class="em">
+                <img src="https://static.cdnlogo.com/logos/a/9/adobe-after-effects-cc.svg" alt="" style="height: 64px; width: 64px;">
+                <img src="https://static.cdnlogo.com/logos/c/36/canva.png" alt="" style="height: 64px; width: 64px;">
+                <img src="https://static.cdnlogo.com/logos/a/3/adobe-creative-cloud.svg" alt="" style="height: 64px; width: 64px;">
+              </div>
+              <div class="cs-card-preview cs-preview-mot">
+                <div class="cs-timeline">
+                  <div class="cs-tl-labels">
+                    <span>VIDEO</span><span>AUDIO</span><span>FX</span>
+                  </div>
+                  <div class="cs-tl-tracks">
+                    <div class="cs-tl-track"><div class="cs-tl-bar cs-tl-bar1"></div></div>
+                    <div class="cs-tl-track"><div class="cs-tl-bar cs-tl-bar2"></div></div>
+                    <div class="cs-tl-track"><div class="cs-tl-bar cs-tl-bar3"></div></div>
+                  </div>
+                  <div class="cs-tl-playhead"></div>
+                </div>
+              </div>
+              <!-- <div class="cs-card-hover-reveal">hover to explore →</div> -->
+            </div>
+         
+          </div>
+         
+           <!-- bottom strip 
+           <div class="cs-bottom-strip">
+            <span>Kota, Rajasthan</span>
+            <span class="cs-strip-dot">·</span>
+            <span>Available for work</span>
+            <span class="cs-strip-dot">·</span>
+            <span>code + art</span>
+            <span class="cs-strip-dot">·</span>
+            <span>2026</span>
+          </div> -->
+         
+        </section>
         <div class="page3" id="work">
  
             <!-- ambient blobs (same style as page2 / page4 circles) -->
             <div class="page3-blob1"></div>
             <div class="page3-blob2"></div>
            
-            <!-- top strip -->
+            <!-- top strip 
             <div class="page3-top-strip">
               <div class="page3-roles">
                 <span class="role-pill">UI/UX Designer 💻</span>
                 <span class="role-pill">Front-end Developer 👩🏻‍💻</span>
               </div>
               <span class="section-badge">Selected Works</span>
-            </div>
+            </div> -->
            
             <!-- big heading -->
             <h2 class="page3-heading">
@@ -176,7 +411,7 @@
               </a>
             </div>
         </div>
-        <div class="page4">
+        <!-- <div class="page4">
             <div class="img">
                 <div class="circle">
                 </div>
@@ -228,7 +463,8 @@
                     <img src="https://static.cdnlogo.com/logos/n/50/notion.svg" alt="" style="height:80px; width:80px;">
                 </div>
             </div>     
-        </div>
+        </div> -->
+        
         <div class="page5" id="connect">
             <div class="page5-top">
                 <h1>Get in touch.</h1>
